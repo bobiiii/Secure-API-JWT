@@ -67,6 +67,10 @@ function Form() {
                     </div>
 
                     <button type="submit" className="w-50 btn btn-primary"> Submit</button>
+
+                </div>
+                <div className=' text-center my-3'>
+                    <span>(Credentials) Phone : 123 , Password : 123</span>
                 </div>
             </form>
 
