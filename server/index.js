@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const auth = require('./Controllers/auth.controller');
 const app = express();
-const PORT = 5010;
 
 app.use(cors());
 app.use(express.json());
@@ -15,6 +14,6 @@ app.get('/', (req, res) => {
 
 app.use('/auth', auth);
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`server is running on ${PORT}`);
 });
