@@ -31,7 +31,6 @@ auth.post('/login', (req, res) => {
   console.log(req.body);
   const phone = parseInt(req.body.phone);
   const password = parseInt(req.body.password);
-  console.log(phone, password);
   if (phone && password !== '') {
     if (phone === users.phone) {
       if (password === users.password) {
@@ -39,7 +38,6 @@ auth.post('/login', (req, res) => {
           { phone: phone, password: password },
           secret_key
         );
-        console.log(token);
         res.status(200).json({ msg: token });
       } else {
         res.status(403).send('phone or password is incorrect');

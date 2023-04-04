@@ -18,7 +18,6 @@ function Form() {
             const res = await axios.post("http://localhost:5010/auth/login", {
                 phone, password
             })
-            console.log(res)
             const token = res.data.msg
             bake_cookie("token", token)
             setLoading(false)
@@ -36,7 +35,6 @@ function Form() {
                 setError(error.response.data)
             }
             setLoading(false)
-            console.log(error.response)
         }
 
     }
